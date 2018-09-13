@@ -1,6 +1,6 @@
 {
   "name": "alfred-reverso",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Quick look from ContextReverso.net and create flash cards to Anki",
   "license": "MIT",
   "repository": "bikenik/alfred-reverso",
