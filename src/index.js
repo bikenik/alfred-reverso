@@ -29,7 +29,7 @@ const joinTheSameItems = arr => {
 		if (uniqueArray.indexOf(elem.srcText) === -1) {
 			uniqueArray.push(elem.srcText)
 			data.push(elem)
-		} else if (data.length === 1) {
+		} else {
 			data[data.length - 1].srcContext.push(elem.srcContext[0])
 			data[data.length - 1].trgContext.push(elem.trgContext[0])
 			data[data.length - 1].toOddcast.push(elem.toOddcast[0])

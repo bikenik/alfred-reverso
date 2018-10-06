@@ -1,4 +1,4 @@
-const fs = require('fs')
+'use strict'
 const alfy = require('alfy')
 const WorkflowError = require('../utils/error')
 const ankiInfo = require('../anki/anki-info')
@@ -13,14 +13,6 @@ const {trgContext} = process.env
 const {userName} = process.env
 
 const srcExist = languagesShortName.filter(x => Object.keys(x)[0] === srcContext)[0][srcContext]
-
-const fileBody = './src/input/body.json'
-try {
-	fs.unlinkSync(fileBody)
-	// "" console.log('successfully deleted: fileBody')
-} catch (error) {
-	// "" console.log(error;
-}
 
 const joinTheSameItems = arr => {
 	const uniqueArray = []

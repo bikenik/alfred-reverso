@@ -1296,17 +1296,22 @@
 				<key>keyword</key>
 				<string>reverso</string>
 				<key>queuedelaycustom</key>
-				<integer>3</integer>
+				<integer>8</integer>
 				<key>queuedelayimmediatelyinitially</key>
 				<false/>
 				<key>queuedelaymode</key>
-				<integer>1</integer>
+				<integer>2</integer>
 				<key>queuemode</key>
 				<integer>1</integer>
 				<key>runningsubtext</key>
 				<string>Getting info from Anki ... | Hint ↩︎</string>
 				<key>script</key>
-				<string>./node_modules/.bin/run-node index.js "$1"</string>
+				<string>if [ -e src/input/body.json ]
+then
+rm src/input/body.json
+fi
+
+./node_modules/.bin/run-node index.js "$1"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -1595,9 +1600,7 @@ fi
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>file=src/input/body.json
-
-if [ -e $file ]
+				<string>if [ -e src/input/body.json ]
 then
 echo -n 'ok'
 else
@@ -2361,7 +2364,7 @@ to translate for instanse or another workflow..</string>
 			<key>note</key>
 			<string>var:action == "dic"</string>
 			<key>xpos</key>
-			<integer>560</integer>
+			<integer>590</integer>
 			<key>ypos</key>
 			<integer>960</integer>
 		</dict>
@@ -2740,8 +2743,8 @@ Search for entries with the given headword</string>
 		<string>note_type_reverse</string>
 	</array>
 	<key>version</key>
-	<string>1.0.0</string>
+	<string>1.0.2</string>
 	<key>webaddress</key>
-	<string>https://github.com/bikeNik/alfred-reverso#readme</string>
+	<string>https://github.com/bikenik/alfred-reverso#readme</string>
 </dict>
 </plist>

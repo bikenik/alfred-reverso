@@ -1,4 +1,3 @@
-const fs = require('fs')
 const got = require('got')
 const cheerio = require('cheerio')
 const alfy = require('alfy')
@@ -18,14 +17,6 @@ const addToItems = new Render()
 
 const srcRef = languagesShortName.filter(x => Object.keys(x)[0] === srcContext)[0][srcContext]
 const trgRef = languagesShortName.filter(x => Object.keys(x)[0] === trgContext)[0][trgContext]
-
-const fileBody = './src/input/body.json'
-try {
-	fs.unlinkSync(fileBody)
-	// "" console.log('successfully deleted: fileBody')
-} catch (error) {
-	// "" console.log(error;
-}
 
 let quickLook = ''
 

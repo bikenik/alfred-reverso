@@ -17,9 +17,13 @@ module.exports = async () => {
 	introMessage[0].valid = true
 
 	const ankiModelExist = await modelExist()
-	if (ankiModelExist.message) {
+	if (ankiModelExist && ankiModelExist.message) {
 		return ankiModelExist
 	}
+	if (!ankiModelExist) {
+		return errorAction('main')
+	}
+
 	const ankiDecks = await decks()
 	if (ankiDecks === null) {
 		throw new WorkflowError('Decks was not found, check your Anki profile', errorAction('profile'))
