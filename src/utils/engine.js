@@ -27,7 +27,8 @@ module.exports = class Render extends Array {
 			if (items.length > 0) {
 				return items
 					.filter(x => Object.prototype.hasOwnProperty
-						.call(x, key))[0][key]
+						.call(x, key))[0] ?
+					items.filter(x => Object.prototype.hasOwnProperty.call(x, key))[0][key] : undefined
 			}
 		}
 		this.name = name

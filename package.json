@@ -38,7 +38,7 @@
   "dependencies": {
     "alfy": "0.7.0",
     "cheerio": "^1.0.0-rc.2",
-    "google-translate-api": "^2.3.0",
+    "google-translate-api": "github:bikenik/google-translate-api",
     "got": "^9.2.2",
     "jsonfile": "^5.0.0",
     "languagedetect": "^1.1.1",
