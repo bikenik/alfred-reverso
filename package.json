@@ -1,71 +1,72 @@
 {
-  "name": "alfred-reverso",
-  "version": "1.0.4",
-  "description": "Quick look from ContextReverso.net and create flash cards to Anki",
-  "license": "MIT",
-  "repository": "bikenik/alfred-reverso",
-  "author": {
-    "name": "bikeNik",
-    "email": "bikenik@icloud.com",
-    "url": "http://bikenik.org"
-  },
-  "engines": {
-    "node": ">=7.6"
-  },
-  "scripts": {
-    "test": "xo && ava",
-    "postinstall": "alfy-init",
-    "preuninstall": "alfy-cleanup"
-  },
-  "files": [
-    "icon.png",
-    "icons",
-    "index.js",
-    "info.plist",
-    "src",
-    "update-config.js"
-  ],
-  "keywords": [
-    "alfred",
-    "workflow",
-    "ContextReverso",
-    "Reverso"
-  ],
-  "bugs": {
-    "url": "https://github.com/bikeNik/alfred-reverso/issues"
-  },
-  "bundleDependencies": false,
-  "dependencies": {
-    "alfy": "0.7.0",
-    "cheerio": "^1.0.0-rc.2",
-    "google-translate-api": "github:bikenik/google-translate-api",
-    "got": "^9.2.2",
-    "jsonfile": "^5.0.0",
-    "languagedetect": "^1.1.1",
-    "md5": "^2.2.1",
-    "p-map": "^2.0.0",
-    "promise": "^8.0.2",
-    "request": "^2.88.0",
-    "request-promise": "^4.2.2",
-    "stream-to-promise": "^2.2.0",
-    "xmlhttprequest": "^1.8.0"
-  },
-  "devDependencies": {
-    "alfy-test": "^0.3.0",
-    "ava": "0.25.0",
-    "xo": "^0.23.0"
-  },
-  "xo": {
-    "space": false,
-    "semicolon": false,
-    "capitalized-comments": [
-      "error",
-      "always",
-      {
-        "block": {
-          "ignorePattern": "blockignore"
-        }
-      }
-    ]
-  }
+	"name": "alfred-reverso",
+	"version": "1.0.4",
+	"description": "Quick look from ContextReverso.net and create flash cards to Anki",
+	"license": "MIT",
+	"repository": "bikenik/alfred-reverso",
+	"author": {
+		"name": "bikeNik",
+		"email": "bikenik@icloud.com",
+		"url": "http://bikenik.org"
+	},
+	"engines": {
+		"node": ">=7.6"
+	},
+	"scripts": {
+		"test": "xo && ava",
+		"postinstall": "alfy-init",
+		"preuninstall": "alfy-cleanup"
+	},
+	"files": [
+		"icon.png",
+		"icons",
+		"index.js",
+		"info.plist",
+		"src",
+		"update-config.js"
+	],
+	"keywords": [
+		"alfred",
+		"workflow",
+		"ContextReverso",
+		"Reverso"
+	],
+	"bugs": {
+		"url": "https://github.com/bikeNik/alfred-reverso/issues"
+	},
+	"bundleDependencies": false,
+	"dependencies": {
+		"alfy": "0.7.0",
+		"cheerio": "^1.0.0-rc.2",
+		"fs-extra": "^7.0.1",
+		"google-translate-api": "github:bikenik/google-translate-api",
+		"got": "^9.2.2",
+		"jsonfile": "^5.0.0",
+		"languagedetect": "^1.1.1",
+		"md5": "^2.2.1",
+		"p-map": "^2.0.0",
+		"promise": "^8.0.2",
+		"request": "^2.88.0",
+		"request-promise": "^4.2.2",
+		"run-applescript": "^3.2.0",
+		"stream-to-promise": "^2.2.0",
+		"xmlhttprequest": "^1.8.0"
+	},
+	"devDependencies": {
+		"ava": "0.25.0",
+		"xo": "^0.23.0"
+	},
+	"xo": {
+		"space": false,
+		"semicolon": false,
+		"capitalized-comments": [
+			"error",
+			"always",
+			{
+				"block": {
+					"ignorePattern": "blockignore"
+				}
+			}
+		]
+	}
 }

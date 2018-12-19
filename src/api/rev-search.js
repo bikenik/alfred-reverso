@@ -13,7 +13,6 @@ const {srcContext} = process.env
 const {trgContext} = process.env
 
 const lngDetector = new LanguageDetect()
-const addToItems = new Render()
 
 const srcRef = languagesShortName.filter(x => Object.keys(x)[0] === srcContext)[0][srcContext]
 const trgRef = languagesShortName.filter(x => Object.keys(x)[0] === trgContext)[0][trgContext]
@@ -55,6 +54,7 @@ module.exports.fetching = async input => {
 			employeesRes = await getPairs(srcContext, trgContext, input)
 		}
 
+		const itemsArr = []
 		if (employeesRes.srcs.length > 0) {
 			const employees = []
 			for (let i = 0; i < employeesRes.srcs.length; i++) {
@@ -66,47 +66,37 @@ module.exports.fetching = async input => {
 				const backInfo = [`${x[0].src}<br>    ↳ ${x[1].trg}`]
 				const langDetect = x[0].lang !== srcRef || x[0].lang === 'reverse'
 				const langBoolForReverse = langDetect && x[1].lang !== trgRef.lang
-				addToItems.add(
-					new Render('list of search',
-						{
-							title: replaceEM(x[0].src)
-						},
-						{
-							subtitle: replaceEM(x[1].trg)
-						},
-						{sentence: ''},
-						{
-							text: {
-								copy: largetype,
-								largetype
-							}
-						},
-						{
-							arg: {
-								srcText: alfy.input,
-								srcContext: [x[0].src],
-								trgContext: [x[1].trg],
-								toOddcast: [langBoolForReverse ? x[0].src : x[1].trg],
-								currentSrc: langBoolForReverse ? srcContext : trgContext,
-								backInfo
-							}
-						},
-						{icon: './icon.png'},
-						{valid: null},
-						{mods: {ctrl: {arg: quickLook}}},
-						{
-							variables: {
-								action: 'dic',
-								mode: 'regular',
-								validOutput: alfy.cache.get('validOutput') === 'true' ? 'true' : 'false',
-								type: 'regular',
-								currentSense: x.largeText
-							}
-						}
-					))
+
+				const item = new Render('list of search',
+					'title', 'subtitle', 'text', 'arg', 'icon', 'valid', 'mods', 'variables')
+				item.title = replaceEM(x[0].src)
+				item.subtitle = replaceEM(x[1].trg)
+				item.text = {
+					copy: largetype,
+					largetype
+				}
+				item.arg = {
+					srcText: alfy.input,
+					srcContext: [x[0].src],
+					trgContext: [x[1].trg],
+					toOddcast: [langBoolForReverse ? x[0].src : x[1].trg],
+					currentSrc: langBoolForReverse ? srcContext : trgContext,
+					backInfo
+				}
+				item.icon = './icon.png'
+				item.valid = null
+				item.mods = {ctrl: {arg: quickLook}}
+				item.variables = {
+					action: 'dic',
+					mode: 'regular',
+					validOutput: alfy.cache.get('validOutput') === 'true' ? 'true' : 'false',
+					type: 'regular',
+					currentSense: x.largeText
+				}
+				itemsArr.push(item.getProperties())
 			}
 		} else {
-			addToItems.items.push({
+			itemsArr.push({
 				title: 'API not exist examples',
 				subtitle: 'Hint the Enter to go to context.reverso.net',
 				text: {
@@ -116,7 +106,7 @@ module.exports.fetching = async input => {
 			})
 		}
 
-		const items = addToItems.items.filter(item => item.title)
+		const items = itemsArr.filter(item => item.title)
 		const variantsToSingleChoose = items.map(x => ({
 			title: x.title,
 			subtitle: x.subtitle,

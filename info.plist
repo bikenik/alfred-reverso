@@ -903,7 +903,7 @@
 			<key>config</key>
 			<dict>
 				<key>externaltriggerid</key>
-				<string>anki-refresh</string>
+				<string>refresh</string>
 				<key>passinputasargument</key>
 				<true/>
 				<key>passvariables</key>
@@ -1837,7 +1837,7 @@ fi</string>
 			<key>config</key>
 			<dict>
 				<key>triggerid</key>
-				<string>anki-refresh</string>
+				<string>refresh</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.trigger.external</string>
@@ -1893,6 +1893,25 @@ fi</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>externaltriggerid</key>
+				<string>refresh</string>
+				<key>passinputasargument</key>
+				<true/>
+				<key>passvariables</key>
+				<true/>
+				<key>workflowbundleid</key>
+				<string>self</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.callexternaltrigger</string>
+			<key>uid</key>
+			<string>34CD4B54-F8FB-4503-9B8A-7923F24419E6</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -1916,25 +1935,6 @@ fi</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>externaltriggerid</key>
-				<string>anki-refresh</string>
-				<key>passinputasargument</key>
-				<true/>
-				<key>passvariables</key>
-				<true/>
-				<key>workflowbundleid</key>
-				<string>self</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.callexternaltrigger</string>
-			<key>uid</key>
-			<string>34CD4B54-F8FB-4503-9B8A-7923F24419E6</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>inputstring</key>
 				<string>{var:action}</string>
 				<key>matchcasesensitive</key>
@@ -1948,6 +1948,25 @@ fi</string>
 			<string>alfred.workflow.utility.filter</string>
 			<key>uid</key>
 			<string>683BA9C7-EFEA-49B3-97FD-4F48A36212E8</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>externaltriggerid</key>
+				<string>reverso</string>
+				<key>passinputasargument</key>
+				<false/>
+				<key>passvariables</key>
+				<false/>
+				<key>workflowbundleid</key>
+				<string>self</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.callexternaltrigger</string>
+			<key>uid</key>
+			<string>D9B17D16-1A06-412E-A365-CD871C31298F</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -2011,25 +2030,6 @@ fi</string>
 			<string>alfred.workflow.utility.filter</string>
 			<key>uid</key>
 			<string>84D5EC59-0403-4075-AB51-56C7AC7ACA0F</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>externaltriggerid</key>
-				<string>reverso</string>
-				<key>passinputasargument</key>
-				<false/>
-				<key>passvariables</key>
-				<false/>
-				<key>workflowbundleid</key>
-				<string>self</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.callexternaltrigger</string>
-			<key>uid</key>
-			<string>D9B17D16-1A06-412E-A365-CD871C31298F</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -2253,7 +2253,7 @@ ANKI-REFRESH</string>
 			<key>xpos</key>
 			<integer>1000</integer>
 			<key>ypos</key>
-			<integer>1880</integer>
+			<integer>1800</integer>
 		</dict>
 		<key>3D89E405-E312-413E-AA36-86E91A3BB52A</key>
 		<dict>
@@ -2660,7 +2660,7 @@ to translate for instanse or another workflow..</string>
 			<key>xpos</key>
 			<integer>1000</integer>
 			<key>ypos</key>
-			<integer>2050</integer>
+			<integer>1960</integer>
 		</dict>
 		<key>E029CB38-589F-4211-A880-93E06895A838</key>
 		<dict>
@@ -2731,7 +2731,7 @@ Search for entries with the given headword</string>
 		<key>trgContext</key>
 		<string>english</string>
 		<key>userName</key>
-		<string>contextAlfred</string>
+		<string></string>
 	</dict>
 	<key>variablesdontexport</key>
 	<array>
@@ -2743,7 +2743,7 @@ Search for entries with the given headword</string>
 		<string>note_type_reverse</string>
 	</array>
 	<key>version</key>
-	<string>1.0.3</string>
+	<string>1.0.4</string>
 	<key>webaddress</key>
 	<string>https://github.com/bikenik/alfred-reverso#readme</string>
 </dict>

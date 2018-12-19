@@ -32,6 +32,9 @@ module.exports = {
 		},
 		refresh: {
 			'refreshing...': 'refreshings ...'
+		},
+		theme: {
+			'change theme': 'toogle ...'
 		}
 	}
 }
