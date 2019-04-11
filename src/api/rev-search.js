@@ -60,6 +60,7 @@ module.exports.fetching = async input => {
 			for (let i = 0; i < employeesRes.srcs.length; i++) {
 				employees[i] = [employeesRes.srcs[i], employeesRes.trgs[i]]
 			}
+
 			const replaceEM = target => target.replaceAll('<em>', ' (').replaceAll('</em>', ') ')
 			for (const x of employees) {
 				const largetype = `${replaceEM(x[0].src)}\n\n ↳ ${replaceEM(x[1].trg)}`

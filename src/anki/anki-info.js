@@ -20,6 +20,7 @@ module.exports = async () => {
 	if (ankiModelExist && ankiModelExist.message) {
 		return ankiModelExist
 	}
+
 	if (!ankiModelExist) {
 		return errorAction('main')
 	}
@@ -28,6 +29,7 @@ module.exports = async () => {
 	if (ankiDecks === null) {
 		throw new WorkflowError('Decks was not found, check your Anki profile', errorAction('profile'))
 	}
+
 	jsonfile.writeFile(fileAnkiDecks, ankiDecks, {
 		spaces: 2
 	}, error => {

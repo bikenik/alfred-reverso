@@ -51,10 +51,12 @@ const option = async input => {
 		if (ankiModelExist.message) {
 			throw new WorkflowError('Decks was not found, check your Anki profile', errorAction('modelExist'))
 		}
+
 		const ankiDecks = await decks()
 		if (ankiDecks === null) {
 			throw new WorkflowError('Decks was not found, check your Anki profile', errorAction('profile'))
 		}
+
 		jsonfile.writeFile(fileAnkiDecks, ankiDecks, {
 			spaces: 2
 		}, err => {
@@ -69,11 +71,13 @@ const option = async input => {
 if (!alfy.cache.get('start-PID')) {
 	alfy.cache.set('start-PID', process.pid, {maxAge: 30000}) // 30 sec.
 }
+
 (async () => {
 	if (alfy.config.get('theme') === undefined) {
 		await fs.copy(`${process.env.PWD}/icons/for-light-theme/`, `${process.env.PWD}/icons/`)
 		alfy.config.set('theme', 'dark')
 	}
+
 	try {
 		if (alfy.cache.get('start-PID') === process.pid) {
 			await runApplescript(`
@@ -84,6 +88,7 @@ if (!alfy.cache.get('start-PID')) {
 				end tell
 		`)
 		}
+
 		if (/!.*/.test(alfy.input) || alfy.input === '') {
 			const out = await option(alfy.input)
 			alfy.output(out)

@@ -1,6 +1,5 @@
 /* eslint camelcase: ["error", {properties: "never"}] */
 /* eslint camelcase: ["error", {properties: "never"}] */
-/* eslint-disable no-unused-vars */
 /* eslint-parserOptions: {"ecmaVersion: 2017"} */
 'use strict'
 const fs = require('fs')
@@ -105,6 +104,7 @@ async function getData(card, getHtmlOutput) {
 			await streamToPromise(writeStreamExp)
 			writeStreamExp.end()
 		}
+
 		wrightFiles()
 		audioField = `${card.srcText} <span class="speaker brefile fa fa-volume-up">[sound:${runOddcast.id}.mp3]</span><br>`
 	} else {
@@ -131,6 +131,7 @@ async function getData(card, getHtmlOutput) {
 	if (!card.Part_of_speech) {
 		card.Part_of_speech = ''
 	}
+
 	return {
 		Headword: card.srcText,
 		Audio: audioField,

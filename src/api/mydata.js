@@ -68,6 +68,7 @@ module.exports = data => {
 	if (srcContext !== data.currentSrc) {
 		revExample = data.srcContext
 	}
+
 	if (textToAudio[0] !== '') {
 		textToAudio.forEach((example, i) => {
 			if (trgContext === 'hebrew') {
@@ -84,6 +85,7 @@ module.exports = data => {
 					await streamToPromise(writeStreamExp)
 					writeStreamExp.end()
 				}
+
 				wrightFiles()
 				HTMLoutput += `<span class="EXAMPLE"><span class="speaker exafile fa fa-volume-up">[sound:${runOddcast.id}.mp3]</span>${revExample ? revExample[i] : example}</span>`
 				HTMLoutputBack += `<span class="EXAMPLE"><span class="speaker exafile fa fa-volume-up">[sound:${runOddcast.id}.mp3]</span>${data.backInfo[i] ? data.backInfo[i] : ''}</span>`
@@ -92,6 +94,7 @@ module.exports = data => {
 		HTMLoutput += '</span>'
 		HTMLoutputBack += '</span>'
 	}
+
 	return {
 		output: HTMLoutput.replaceAll(/\/v2\/.*?exa_pron\/(.*?mp3)/, `[sound:$1]`),
 		outputBack: HTMLoutputBack.replaceAll(/\/v2\/.*?exa_pron\/(.*?mp3)/, `[sound:$1]`),
@@ -99,6 +102,7 @@ module.exports = data => {
 		definitionForTranslate: body.definitionForTranslate
 	}
 }
+
 function removeDuplicates(arr) {
 	const uniqueArray = []
 	const data = []

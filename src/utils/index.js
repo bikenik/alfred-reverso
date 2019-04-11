@@ -6,6 +6,7 @@ String.prototype.replaceAll = function (search, replacement) {
 	const target = this
 	return target.replace(new RegExp(search, 'gi'), replacement)
 }
+
 /* eslint-disable-next-line no-use-extend-native/no-use-extend-native */
 Array.prototype.last = function () {
 	return this[this.length - 1]

@@ -17,6 +17,7 @@ module.exports = () => {
 			throw new WorkflowError(error, errorAction('main'))
 		}
 	}
+
 	return outresult()
 }
 
@@ -35,6 +36,7 @@ module.exports.modelExist = () => {
 		}
 		/* eslint-enable no-await-in-loop */
 	}
+
 	return outresult()
 }
 
@@ -58,15 +60,14 @@ module.exports.render = async (pattern = '', autocomplete = () => undefined, ank
 				alfredworkflow: {
 					variables: {
 						action: 'set',
-						/* eslint-disable camelcase */
 						config_variable: 'default-deck',
 						config_value: pattern
-						/* eslint-enable camelcase */
 					}
 				}
 			})
 		})
 		return out
 	}
+
 	return out
 }
