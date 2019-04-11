@@ -36,25 +36,25 @@
 	},
 	"bundleDependencies": false,
 	"dependencies": {
-		"alfy": "0.7.0",
-		"cheerio": "^1.0.0-rc.2",
+		"alfy": "0.8.0",
+		"cheerio": "^1.0.0-rc.3",
 		"fs-extra": "^7.0.1",
-		"google-translate-api": "github:bikenik/google-translate-api",
-		"got": "^9.2.2",
+		"google-translate-api": "^2.3.0",
+		"got": "^9.6.0",
 		"jsonfile": "^5.0.0",
 		"languagedetect": "^1.1.1",
 		"md5": "^2.2.1",
-		"p-map": "^2.0.0",
-		"promise": "^8.0.2",
+		"p-map": "^2.1.0",
+		"promise": "^8.0.3",
 		"request": "^2.88.0",
-		"request-promise": "^4.2.2",
+		"request-promise": "^4.2.4",
 		"run-applescript": "^3.2.0",
 		"stream-to-promise": "^2.2.0",
 		"xmlhttprequest": "^1.8.0"
 	},
 	"devDependencies": {
-		"ava": "0.25.0",
-		"xo": "^0.23.0"
+		"ava": "1.4.1",
+		"xo": "^0.24.0"
 	},
 	"xo": {
 		"space": false,

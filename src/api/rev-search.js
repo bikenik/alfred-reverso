@@ -65,7 +65,7 @@ module.exports.fetching = async input => {
 				const largetype = `${replaceEM(x[0].src)}\n\n ↳ ${replaceEM(x[1].trg)}`
 				const backInfo = [`${x[0].src}<br>    ↳ ${x[1].trg}`]
 				const langDetect = x[0].lang !== srcRef || x[0].lang === 'reverse'
-				const langBoolForReverse = langDetect && x[1].lang !== trgRef.lang
+				const langBoolForReverse = langDetect && x[1].lang !== trgRef
 
 				const item = new Render('list of search',
 					'title', 'subtitle', 'text', 'arg', 'icon', 'valid', 'mods', 'variables')

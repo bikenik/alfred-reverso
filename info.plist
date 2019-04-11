@@ -2395,7 +2395,7 @@ to translate for instanse or another workflow..</string>
 			<key>xpos</key>
 			<integer>1110</integer>
 			<key>ypos</key>
-			<integer>500</integer>
+			<integer>470</integer>
 		</dict>
 		<key>74E341E1-9036-4A05-8F57-42C791DFC96F</key>
 		<dict>
@@ -2669,7 +2669,7 @@ to translate for instanse or another workflow..</string>
 			<key>xpos</key>
 			<integer>1110</integer>
 			<key>ypos</key>
-			<integer>610</integer>
+			<integer>580</integer>
 		</dict>
 		<key>E2D15676-870B-4EE9-A16F-F144FBBE3412</key>
 		<dict>
@@ -2743,7 +2743,7 @@ Search for entries with the given headword</string>
 		<string>note_type_reverse</string>
 	</array>
 	<key>version</key>
-	<string>1.0.5</string>
+	<string>1.0.6</string>
 	<key>webaddress</key>
 	<string>https://github.com/bikenik/alfred-reverso#readme</string>
 </dict>
