@@ -5,7 +5,7 @@
 const fs = require('fs')
 const request = require('request-promise')
 const jsonfile = require('jsonfile')
-const translate = require('google-translate-api')
+const translate = require('@vitalets/google-translate-api')
 const streamToPromise = require('stream-to-promise')
 const pMap = require('p-map')
 
