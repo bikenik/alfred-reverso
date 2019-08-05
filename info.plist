@@ -870,6 +870,10 @@
 				<integer>1</integer>
 				<key>matchstring</key>
 				<string>^"|"$</string>
+				<key>regexcaseinsensitive</key>
+				<false/>
+				<key>regexmultiline</key>
+				<false/>
 				<key>replacestring</key>
 				<string></string>
 			</dict>
@@ -878,7 +882,7 @@
 			<key>uid</key>
 			<string>164A3311-D168-43E1-AC52-761ECD6BA854</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -1106,11 +1110,11 @@
 				<key>focusedappvariablename</key>
 				<string></string>
 				<key>hotkey</key>
-				<integer>0</integer>
+				<integer>31</integer>
 				<key>hotmod</key>
-				<integer>0</integer>
+				<integer>786432</integer>
 				<key>hotstring</key>
-				<string></string>
+				<string>R</string>
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>
@@ -1230,6 +1234,10 @@
 				<integer>1</integer>
 				<key>matchstring</key>
 				<string>!err:(.*?\.)\s.*</string>
+				<key>regexcaseinsensitive</key>
+				<false/>
+				<key>regexmultiline</key>
+				<false/>
 				<key>replacestring</key>
 				<string>$1</string>
 			</dict>
@@ -1238,7 +1246,7 @@
 			<key>uid</key>
 			<string>E8842A06-DED1-489F-AB41-28A1425D0EE3</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -1287,6 +1295,8 @@
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
 				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
 				<key>argumenttrimmode</key>
 				<integer>1</integer>
 				<key>argumenttype</key>
@@ -1330,7 +1340,7 @@ fi
 			<key>uid</key>
 			<string>FE95CA03-945D-4E4B-A68A-F0B01B9A01B2</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -2727,9 +2737,9 @@ Search for entries with the given headword</string>
 		<key>path_to_ankiMedia</key>
 		<string>/Library/Application Support/Anki2/English/collection.media</string>
 		<key>srcContext</key>
-		<string>russian</string>
-		<key>trgContext</key>
 		<string>english</string>
+		<key>trgContext</key>
+		<string>russian</string>
 		<key>userName</key>
 		<string></string>
 	</dict>
@@ -2743,7 +2753,7 @@ Search for entries with the given headword</string>
 		<string>note_type_reverse</string>
 	</array>
 	<key>version</key>
-	<string>1.0.6</string>
+	<string>1.1.0</string>
 	<key>webaddress</key>
 	<string>https://github.com/bikenik/alfred-reverso#readme</string>
 </dict>

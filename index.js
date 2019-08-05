@@ -16,7 +16,7 @@ const favorites = require('./src/api/rev-favourites')
 const ankiInfo = require('./src/anki/anki-info')
 
 const commands = [set, del, theme]
-const fileAnkiDecks = './src/input/anki-decks.json'
+const fileAnkiDecks = `${process.env.alfred_workflow_data}/anki-decks.json`
 
 const introMessage = [{
 	subtitle: `Current deck is ⇒ ${alfy.config.get('default-deck')}`
@@ -81,10 +81,10 @@ if (!alfy.cache.get('start-PID')) {
 	try {
 		if (alfy.cache.get('start-PID') === process.pid) {
 			await runApplescript(`
-				tell application "Alfred 3"
+				tell application id "com.runningwithcrayons.Alfred"
 					run trigger ¬
 						"refresh" in workflow ¬
-						"com.bikenik.reverso"
+						"com.bikenik.reverso" with argument "#runref"
 				end tell
 		`)
 		}

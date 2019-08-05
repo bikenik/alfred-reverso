@@ -8,7 +8,7 @@ const WorkflowError = require('../utils/error')
 const {hasOwnProperty} = require('../utils')
 const {cards, areDue, areSuspend} = require('../anki/anki-cards')
 
-const fileAnkiCards = './src/input/anki-cards.json'
+const fileAnkiCards = `${process.env.alfred_workflow_data}/anki-cards.json`
 const cards2Json = {}
 
 const variables = {
@@ -49,9 +49,9 @@ const runUpdate = async () => {
 	})
 }
 
-if (process.argv[2] === '#runref') {
-	runUpdate()
-}
+// If (process.argv[2] === '#runref') {
+runUpdate()
+// }
 
 // Output matching for config variables
 const outputVariables = pattern => {

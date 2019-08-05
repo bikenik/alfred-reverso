@@ -5,7 +5,7 @@ const decks = require('../anki/anki-decks')
 const {modelExist} = require('../anki/anki-decks')
 const {errorAction} = require('../utils/error')
 
-const fileAnkiDecks = './src/input/anki-decks.json'
+const fileAnkiDecks = `${process.env.alfred_workflow_data}/anki-decks.json`
 
 module.exports = async () => {
 	const introMessage = [{

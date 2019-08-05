@@ -1,12 +1,22 @@
 /* eslint-disable capitalized-comments */
-
+const fs = require('fs-extra')
 const alfy = require('alfy')
 const WorkflowError = require('../utils/error')
 const {errorAction} = require('../utils/error')
 const {hasOwnProperty} = require('../utils')
 const config = require('../config')
 const decks = require('../anki/anki-decks')
-const ankiCards = require('../input/anki-cards.json')
+
+let ankiCards
+const jsonPath = `${process.env.alfred_workflow_data}/anki-cards.json`
+
+try {
+	if (fs.existsSync(jsonPath)) {
+		ankiCards = require(`${process.env.alfred_workflow_data}/anki-cards.json`)
+	}
+} catch (error) {
+	console.error(error)
+}
 
 const variables = {
 	'default-deck': {
