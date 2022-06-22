@@ -40,7 +40,7 @@
 		"cheerio": "^1.0.0-rc.3",
 		"fs-extra": "^8.1.0",
 		"@vitalets/google-translate-api": "^2.8.0",
-		"got": "^9.6.0",
+		"got": "^11.8.5",
 		"jsonfile": "^5.0.0",
 		"languagedetect": "^1.1.1",
 		"md5": "^2.2.1",
